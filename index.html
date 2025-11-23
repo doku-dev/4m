@@ -311,6 +311,7 @@
             font-style: italic;
             color: white;
             opacity: 0;
+            visibility: hidden;
             position: absolute;
             width: 100%;
             left: 0;
@@ -324,9 +325,21 @@
         .carousel-phrase:nth-child(3) { animation-delay: 8s; }
 
         @keyframes fadePhrase {
-            0%, 33.33% { opacity: 0; transform: translateY(10px); }
-            8.33%, 25% { opacity: 1; transform: translateY(0); }
-            33.33%, 100% { opacity: 0; transform: translateY(-10px); }
+            0%, 33.33% { 
+                opacity: 0; 
+                visibility: hidden;
+                transform: translateY(10px); 
+            }
+            8.33%, 25% { 
+                opacity: 1; 
+                visibility: visible;
+                transform: translateY(0); 
+            }
+            33.33%, 100% { 
+                opacity: 0; 
+                visibility: hidden;
+                transform: translateY(-10px); 
+            }
         }
 
         /* Responsive */
